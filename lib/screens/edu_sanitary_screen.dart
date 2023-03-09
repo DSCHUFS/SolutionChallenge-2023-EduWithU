@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
+import 'edu_sanitary_complete_screen.dart';
+
 void main() => runApp(EduSanitaryScreenApp());
 
 class EduSanitaryScreenApp extends StatelessWidget {
@@ -68,7 +70,8 @@ class _EduSanitaryScreenState extends State<EduSanitaryScreen> {
       ),
       // VideoPlayerController가 초기화를 진행하는 동안 로딩 스피너를 보여주기 위해
       // FutureBuilder를 사용합니다.
-      body: Column(children: [
+      body: SingleChildScrollView(
+          child: Column(children: [
         FutureBuilder(
           future: _initializeVideoPlayerFuture,
           builder: (context, snapshot) {
@@ -120,10 +123,15 @@ class _EduSanitaryScreenState extends State<EduSanitaryScreen> {
             primary: const Color(0xFF94E1D4),
             onPrimary: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => EduSanitaryNextScreen()));
+          },
           child: Text('Next'),
-        ))
-      ]),
+        )),
+      ])),
       backgroundColor: const Color(0xFFE5F7F1),
     );
   }
