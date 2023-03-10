@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ResultElectricScreen extends StatelessWidget {
-  const ResultElectricScreen({
+class ResultGenderScreen extends StatelessWidget {
+  const ResultGenderScreen({
     Key? key,
     required this.totalScore,
     required this.resetQuiz,

@@ -1,8 +1,8 @@
 import 'package:eduwithu/question_list.dart';
 import 'package:flutter/material.dart';
 
-class QuizElectricScreen extends StatelessWidget {
-  const QuizElectricScreen({
+class QuizRecycleScreen extends StatelessWidget {
+  const QuizRecycleScreen({
     Key? key,
     required this.answerPressed,
     required this.questionIndex,
@@ -27,14 +27,14 @@ class QuizElectricScreen extends StatelessWidget {
               border: Border.all(color: Color(0xFF94E1D4)),
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Text(electricQuestionList[questionIndex]["questionText"]),
+            child: Text(recycleQuestionList[questionIndex]["questionText"]),
           ),
           const SizedBox(height: 150),
           ElevatedButton(
             onPressed: () => answerPressed(
-                electricQuestionList[questionIndex]["answers"][0]["score"]),
+                recycleQuestionList[questionIndex]["answers"][0]["score"]),
             child:
-                Text(electricQuestionList[questionIndex]["answers"][0]["text"]),
+                Text(recycleQuestionList[questionIndex]["answers"][0]["text"]),
             style: ButtonStyle(
               foregroundColor: MaterialStateProperty.resolveWith(
                 (states) {
@@ -58,9 +58,9 @@ class QuizElectricScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () => answerPressed(
-                electricQuestionList[questionIndex]["answers"][1]["score"]),
+                recycleQuestionList[questionIndex]["answers"][1]["score"]),
             child:
-                Text(electricQuestionList[questionIndex]["answers"][1]["text"]),
+                Text(recycleQuestionList[questionIndex]["answers"][1]["text"]),
             style: ButtonStyle(
               foregroundColor: MaterialStateProperty.resolveWith(
                 (states) {
@@ -84,9 +84,9 @@ class QuizElectricScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () => answerPressed(
-                electricQuestionList[questionIndex]["answers"][2]["score"]),
+                recycleQuestionList[questionIndex]["answers"][2]["score"]),
             child:
-                Text(electricQuestionList[questionIndex]["answers"][2]["text"]),
+                Text(recycleQuestionList[questionIndex]["answers"][2]["text"]),
             style: ButtonStyle(
               foregroundColor: MaterialStateProperty.resolveWith(
                 (states) {
@@ -110,9 +110,9 @@ class QuizElectricScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () => answerPressed(
-                electricQuestionList[questionIndex]["answers"][3]["score"]),
+                recycleQuestionList[questionIndex]["answers"][3]["score"]),
             child:
-                Text(electricQuestionList[questionIndex]["answers"][3]["text"]),
+                Text(recycleQuestionList[questionIndex]["answers"][3]["text"]),
             style: ButtonStyle(
               foregroundColor: MaterialStateProperty.resolveWith(
                 (states) {

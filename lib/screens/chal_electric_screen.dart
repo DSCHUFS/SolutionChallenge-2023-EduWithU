@@ -1,4 +1,3 @@
-
 import 'package:eduwithu/question_list.dart';
 import 'package:eduwithu/screens/quiz_electric_screen.dart';
 import 'package:eduwithu/screens/result_electric_screen.dart';
@@ -45,7 +44,7 @@ class _ChalElectricScreenState extends State<ChalElectricScreen> {
         ),
       ),
       backgroundColor: const Color(0xFFE5F7F1),
-      body: (questionIndex < questionList.length)
+      body: (questionIndex < electricQuestionList.length)
           ? QuizElectricScreen(
               answerPressed: answerPressed,
               questionIndex: questionIndex,
