@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:video_player/video_player.dart';
 
-import '../main.dart';
+import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 
 void main() => runApp(ChalHandwashScreenApp());
 
@@ -23,7 +22,8 @@ class ChalHandwashScreen extends StatefulWidget {
   _ChalHandwashScreenState createState() => _ChalHandwashScreenState();
 }
 
-class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTickerProviderStateMixin {
+class _ChalHandwashScreenState extends State<ChalHandwashScreen>
+    with SingleTickerProviderStateMixin {
   late VideoPlayerController _controller;
   late AnimationController _timer;
   late Animation<Color?> _colorTween;
@@ -39,12 +39,10 @@ class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTick
       'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
     );
 
-    _timer = AnimationController(
-      vsync: this,
-      duration: Duration(seconds: 7)
-    )..addListener(() {
-      setState(() {});
-    });
+    _timer = AnimationController(vsync: this, duration: Duration(seconds: 7))
+      ..addListener(() {
+        setState(() {});
+      });
 
     _timer.forward();
 
@@ -60,9 +58,8 @@ class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTick
 
     _controller.setLooping(true);
 
-    _colorTween = _timer.drive(ColorTween(begin: Colors.yellow, end: Colors.blue));
-
-
+    _colorTween =
+        _timer.drive(ColorTween(begin: Colors.yellow, end: Colors.blue));
   }
 
   @override
@@ -87,79 +84,89 @@ class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTick
         ),
       ),
       body: SingleChildScrollView(
-          child: Column(children: [
+        child: Column(
+          children: [
             const SizedBox(height: 50),
-        SizedBox(
-          width: double.infinity,
-          height: 500,
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              Container(
-                child: FutureBuilder(
-                  future: _initializeVideoPlayerFuture,
-                  builder:  (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.done) {
-                      return ClipRRect(
-                          child: FittedBox(
-                    fit: BoxFit.cover,
-                    child: SizedBox(
-                    width: _controller.value.size?.width ?? 0,
-                    height: _controller.value.size?.height ?? 0,
-                          child: Stack( children: [ VideoPlayer(_controller), Center(
-                                child: FloatingActionButton(
-                                  backgroundColor: Colors.transparent,
-                                  hoverColor: const Color(0xFF94E1D4),
-                                  onPressed: () {
-                                    setState(() {
-                                      if (_controller.value.isPlaying) {
-                                        _controller.pause();
-                                      } else {
-                                        _controller.play();
-                                      }
-                                    });
-                                  },
-                                  child: Icon(
-                                    _controller.value.isPlaying
-                                        ? Icons.pause
-                                        : Icons.play_arrow,
-                                  ),
-                                ))]),
-                        ),
-                      ));
-                    } else {
-                      return Center(child: CircularProgressIndicator());
-                    }
-                  },
-                )),
-            ],
-          ),
-        ),
-            Container(  height: 30,
+            SizedBox(
+              width: double.infinity,
+              height: 500,
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Container(
+                    child: FutureBuilder(
+                      future: _initializeVideoPlayerFuture,
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState == ConnectionState.done) {
+                          return ClipRRect(
+                            child: FittedBox(
+                              fit: BoxFit.cover,
+                              child: SizedBox(
+                                width: _controller.value.size?.width ?? 0,
+                                height: _controller.value.size?.height ?? 0,
+                                child: Stack(
+                                  children: [
+                                    VideoPlayer(_controller),
+                                    Center(
+                                      child: FloatingActionButton(
+                                        backgroundColor: Colors.transparent,
+                                        hoverColor: const Color(0xFF94E1D4),
+                                        onPressed: () {
+                                          setState(() {
+                                            if (_controller.value.isPlaying) {
+                                              _controller.pause();
+                                            } else {
+                                              _controller.play();
+                                            }
+                                          });
+                                        },
+                                        child: Icon(
+                                          _controller.value.isPlaying
+                                              ? Icons.pause
+                                              : Icons.play_arrow,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        } else {
+                          return Center(child: CircularProgressIndicator());
+                        }
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+                height: 30,
                 child: VideoProgressIndicator(
-              _controller,
-              allowScrubbing: true,
-              colors: VideoProgressColors(
-                  backgroundColor: Colors.white,
-                  bufferedColor: Colors.white,
-                  playedColor: const Color(0xFF94E1D4)),
-            )),
+                  _controller,
+                  allowScrubbing: true,
+                  colors: VideoProgressColors(
+                      backgroundColor: Colors.white,
+                      bufferedColor: Colors.white,
+                      playedColor: const Color(0xFF94E1D4)),
+                )),
             const SizedBox(height: 30),
             Center(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xFF94E1D4),
-                    onPrimary: Colors.white,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Home()));
-                  },
-                  child: Text('Next'),
-                )),
-          ])),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("NEXT"),
+                style: ButtonStyle(
+                  foregroundColor: MaterialStatePropertyAll(Colors.white),
+                  backgroundColor: MaterialStatePropertyAll(Color(0xFFA3EDD7)),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       backgroundColor: const Color(0xFFE5F7F1),
     );
   }
