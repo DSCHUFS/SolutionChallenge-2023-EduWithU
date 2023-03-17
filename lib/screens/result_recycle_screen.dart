@@ -41,6 +41,16 @@ class ResultRecycleScreen extends StatelessWidget {
               backgroundColor: MaterialStatePropertyAll(Color(0xFFA3EDD7)),
             ),
           ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text("GO TO CHALLENGE"),
+            style: ButtonStyle(
+              foregroundColor: MaterialStatePropertyAll(Colors.white),
+              backgroundColor: MaterialStatePropertyAll(Color(0xFFA3EDD7)),
+            ),
+          ),
         ],
       ),
     );
