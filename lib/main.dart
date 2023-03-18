@@ -1,8 +1,16 @@
+import 'package:eduwithu/FirebaseTestScreen.dart';
 import 'package:eduwithu/screens/home_screen.dart';
 import 'package:eduwithu/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() => runApp(const TestApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+
+  runApp(TestF());
+}
 
 class TestApp extends StatelessWidget {
   const TestApp({Key? key}) : super(key: key);
@@ -112,3 +120,4 @@ class _CustomNavigatorState extends State<CustomNavigator>
     );
   }
 }
+
