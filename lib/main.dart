@@ -10,6 +10,7 @@ class TestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Edu with U',
       home: Home(),
     );
