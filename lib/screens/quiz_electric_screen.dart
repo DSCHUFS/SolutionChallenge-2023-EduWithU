@@ -1,4 +1,4 @@
-import 'package:eduwithu/question_list.dart';
+import 'package:eduwithu/Data/question_list.dart';
 import 'package:flutter/material.dart';
 
 class QuizElectricScreen extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:eduwithu/question_list.dart';
+import 'package:eduwithu/Data/question_list.dart';
 import 'package:eduwithu/screens/quiz_gender_screen.dart';
 import 'package:eduwithu/screens/result_gender_screen.dart';
 import 'package:flutter/material.dart';

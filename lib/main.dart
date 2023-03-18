@@ -1,3 +1,4 @@
+import 'package:eduwithu/FirebaseTestScreen.dart';
 import 'package:eduwithu/screens/home_screen.dart';
 import 'package:eduwithu/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp();
 
-  runApp(TestApp());
+  runApp(TestF());
 }
 
 class TestApp extends StatelessWidget {
