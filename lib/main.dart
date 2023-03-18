@@ -26,7 +26,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final _pages = const [HomeScreen(), ProfileScreen()];
   final _navigatorKeyList =
-      List.generate(2, (index) => GlobalKey<NavigatorState>());
+  List.generate(2, (index) => GlobalKey<NavigatorState>());
   int _currentIndex = 0;
 
   @override
@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
         child: Scaffold(
           body: TabBarView(
             children: _pages.map(
-              (page) {
+                  (page) {
                 int index = _pages.indexOf(page);
                 return CustomNavigator(
                   page: page,

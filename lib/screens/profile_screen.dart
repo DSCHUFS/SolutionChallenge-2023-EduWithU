@@ -17,7 +17,8 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
+          child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -165,7 +166,7 @@ class ProfileScreen extends StatelessWidget {
             )
           ],
         ),
-      ),
+      )),
       backgroundColor: const Color(0xFFE5F7F1),
     );
   }

@@ -17,6 +17,8 @@ class ChalBrushScreen extends StatelessWidget {
           ),
         ),
       ),
+
+
       backgroundColor: const Color(0xFFE5F7F1),
     );
   }
