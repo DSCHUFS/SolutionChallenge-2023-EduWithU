@@ -1,16 +1,16 @@
 import 'package:eduwithu/Data/question_list.dart';
-import 'package:eduwithu/screens/quiz_electric_screen.dart';
-import 'package:eduwithu/screens/result_electric_screen.dart';
+import 'package:eduwithu/screens/Quiz/quiz_recycle_screen.dart';
+import 'package:eduwithu/screens/Result/result_recycle_screen.dart';
 import 'package:flutter/material.dart';
 
-class ChalElectricScreen extends StatefulWidget {
-  const ChalElectricScreen({Key? key}) : super(key: key);
+class ChalRecycleScreen extends StatefulWidget {
+  const ChalRecycleScreen({Key? key}) : super(key: key);
 
   @override
-  State<ChalElectricScreen> createState() => _ChalElectricScreenState();
+  State<ChalRecycleScreen> createState() => _ChalRecycleScreenState();
 }
 
-class _ChalElectricScreenState extends State<ChalElectricScreen> {
+class _ChalRecycleScreenState extends State<ChalRecycleScreen> {
   int questionIndex = 0;
   int totalScore = 0;
 
@@ -37,19 +37,19 @@ class _ChalElectricScreenState extends State<ChalElectricScreen> {
         backgroundColor: const Color(0xFF94E1D4),
         foregroundColor: Colors.black,
         title: const Text(
-          'Electric',
+          'Recycle',
           style: TextStyle(
             fontSize: 24,
           ),
         ),
       ),
       backgroundColor: const Color(0xFFE5F7F1),
-      body: (questionIndex < electricQuestionList.length)
-          ? QuizElectricScreen(
+      body: (questionIndex < recycleQuestionList.length)
+          ? QuizRecycleScreen(
               answerPressed: answerPressed,
               questionIndex: questionIndex,
             )
-          : ResultElectricScreen(
+          : ResultRecycleScreen(
               totalScore: totalScore,
               resetQuiz: resetQuiz,
             ),

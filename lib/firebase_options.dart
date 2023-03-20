@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCv1KuFnTiqg7_QOdJ61JYTA1x5yPNT_JA',
-    appId: '1:420430655624:android:c7600f5cf6a3f9b2e8af3d',
-    messagingSenderId: '420430655624',
-    projectId: 'eduwithu-cdeaf',
-    storageBucket: 'eduwithu-cdeaf.appspot.com',
+    apiKey: 'AIzaSyDP8q0PG6zbOPFbiYOyApo1MqrG55wWFqk',
+    appId: '1:783635478274:android:aca16daec0268f487a341b',
+    messagingSenderId: '783635478274',
+    projectId: 'eduwithu-95b02',
+    storageBucket: 'eduwithu-95b02.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCG0m7yAsooOJ_m9vuzlaMIie3A71oX0PU',
-    appId: '1:420430655624:ios:1a30d61804560158e8af3d',
-    messagingSenderId: '420430655624',
-    projectId: 'eduwithu-cdeaf',
-    storageBucket: 'eduwithu-cdeaf.appspot.com',
-    iosClientId: '420430655624-d37o8a1n2u1jqr9qsrmkt20donn231rl.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCE1hkALFsVdC7UC_x0h_vR9R3ykXmuHbs',
+    appId: '1:783635478274:ios:a567c91474361f297a341b',
+    messagingSenderId: '783635478274',
+    projectId: 'eduwithu-95b02',
+    storageBucket: 'eduwithu-95b02.appspot.com',
+    iosClientId: '783635478274-ih070bsoqmheube2o0eebrjla36krrl4.apps.googleusercontent.com',
     iosBundleId: 'com.example.eduwithu',
   );
 }

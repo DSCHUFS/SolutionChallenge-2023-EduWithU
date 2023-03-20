@@ -1,16 +1,16 @@
 import 'package:eduwithu/Data/question_list.dart';
-import 'package:eduwithu/screens/quiz_recycle_screen.dart';
-import 'package:eduwithu/screens/result_recycle_screen.dart';
+import 'package:eduwithu/screens/Quiz/quiz_gender_screen.dart';
+import 'package:eduwithu/screens/Result/result_gender_screen.dart';
 import 'package:flutter/material.dart';
 
-class ChalRecycleScreen extends StatefulWidget {
-  const ChalRecycleScreen({Key? key}) : super(key: key);
+class ChalGenderScreen extends StatefulWidget {
+  const ChalGenderScreen({Key? key}) : super(key: key);
 
   @override
-  State<ChalRecycleScreen> createState() => _ChalRecycleScreenState();
+  State<ChalGenderScreen> createState() => _ChalGenderScreenState();
 }
 
-class _ChalRecycleScreenState extends State<ChalRecycleScreen> {
+class _ChalGenderScreenState extends State<ChalGenderScreen> {
   int questionIndex = 0;
   int totalScore = 0;
 
@@ -37,19 +37,19 @@ class _ChalRecycleScreenState extends State<ChalRecycleScreen> {
         backgroundColor: const Color(0xFF94E1D4),
         foregroundColor: Colors.black,
         title: const Text(
-          'Recycle',
+          'Gender',
           style: TextStyle(
             fontSize: 24,
           ),
         ),
       ),
       backgroundColor: const Color(0xFFE5F7F1),
-      body: (questionIndex < recycleQuestionList.length)
-          ? QuizRecycleScreen(
+      body: (questionIndex < genderQuestionList.length)
+          ? QuizGenderScreen(
               answerPressed: answerPressed,
               questionIndex: questionIndex,
             )
-          : ResultRecycleScreen(
+          : ResultGenderScreen(
               totalScore: totalScore,
               resetQuiz: resetQuiz,
             ),
