@@ -14,7 +14,7 @@ class TestF extends StatefulWidget {
 }
 
 class _TestFState extends State<TestF> {
-  final db = FirebaseFirestore.instance.collection('Test');
+  final db = FirebaseFirestore.instance.collection('Member');
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,6 +27,7 @@ class _TestFState extends State<TestF> {
               AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>>
                   streamSnapshot) {
             if (streamSnapshot.hasData) {
+              print('object');
               return ListView.builder(
                 itemCount: streamSnapshot.data!.docs.length,
                 itemBuilder: (context, index){
@@ -40,7 +41,13 @@ class _TestFState extends State<TestF> {
                 },
               );
             }
-            return Center(child: CircularProgressIndicator());
+            else{
+              print('else');
+              return Center(child: Text(
+                'dddd'
+              ),
+              );
+            }
           },
         ),
       ),
