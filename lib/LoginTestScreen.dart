@@ -1,4 +1,3 @@
-import 'package:auth/auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eduwithu/Data/Edudata_Read.dart';
 import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
@@ -15,24 +14,24 @@ class TestL extends StatefulWidget {
 }
 
 class _TestLState extends State<TestL> {
-  final db = FirebaseFirestore.instance.collection('Test');
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Edu with U',
       home: Scaffold(
-        body: ElevatedButton(
-          onPressed: () async {
-            await FirebaseAuth.instance.createUserWithEmailAndPassword(email: , password: );
-            FirebaseAuth.instance.currentUser?.sendEmailVerification();
-          },
-          child: Text(
-              'Login'
-          ),
-        ),
+       body: Center(
+         child: TextButton(
+           onPressed: () {
+             print('asdasd');
+           },
+           child: Text(
+             'Login',
+             style: TextStyle(color: Colors.cyan),
+           ),
+         ),
+       ),
       ),
     );
-    ;
   }
 }

@@ -12,7 +12,6 @@ void main() async {
   Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
 
   runApp(TestL());
-
 }
 
 class TestApp extends StatelessWidget {
