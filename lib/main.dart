@@ -7,9 +7,9 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+  await Firebase.initializeApp();
 
-  runApp(TestF());
+  runApp(TestApp());
 }
 
 class TestApp extends StatelessWidget {

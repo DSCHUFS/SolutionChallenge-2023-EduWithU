@@ -40,6 +40,8 @@ dependencies:
   firebase_core: ^2.8.0
   cloud_firestore: ^4.4.5
   auth: ^8.2.0+02
+  cloud_functions: ^4.0.13
+  get: ^4.6.5
 
 
 dev_dependencies:
