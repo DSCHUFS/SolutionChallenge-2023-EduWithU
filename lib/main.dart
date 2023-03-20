@@ -1,4 +1,5 @@
 import 'package:eduwithu/FirebaseTestScreen.dart';
+import 'package:eduwithu/LoginTestScreen.dart';
 import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
 import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp();
 
-  runApp(TestApp());
+  runApp(TestL());
 }
 
 class TestApp extends StatelessWidget {

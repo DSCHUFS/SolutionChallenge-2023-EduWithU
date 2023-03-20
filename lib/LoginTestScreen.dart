@@ -14,21 +14,24 @@ class TestL extends StatefulWidget {
 }
 
 class _TestLState extends State<TestL> {
-  final db = FirebaseFirestore.instance.collection('Test');
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Edu with U',
       home: Scaffold(
-       body: TextButton(
-         onPressed: () {  },
-         child: Text(
-           'Login'
+       body: Center(
+         child: TextButton(
+           onPressed: () {
+             print('asdasd');
+           },
+           child: Text(
+             'Login',
+             style: TextStyle(color: Colors.cyan),
+           ),
          ),
        ),
       ),
     );
-    ;
   }
 }
