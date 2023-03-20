@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eduwithu/Data/Edudata_Read.dart';
-import 'package:eduwithu/screens/home_screen.dart';
-import 'package:eduwithu/screens/profile_screen.dart';
+import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
+import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';

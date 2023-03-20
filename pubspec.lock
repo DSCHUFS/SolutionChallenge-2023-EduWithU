@@ -632,6 +632,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+  mockito:
+    dependency: "direct main"
+    description:
+      name: mockito
+      sha256: "6668f23c57bbf3857437c1683e8e0bef7e1077537593293e1fc8d1099fcc1981"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.15"
   package_config:
     dependency: transitive
     description:

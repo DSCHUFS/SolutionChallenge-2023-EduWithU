@@ -1,16 +1,16 @@
 import 'package:eduwithu/Data/question_list.dart';
-import 'package:eduwithu/screens/quiz_gender_screen.dart';
-import 'package:eduwithu/screens/result_gender_screen.dart';
+import 'package:eduwithu/screens/Quiz/quiz_electric_screen.dart';
+import 'package:eduwithu/screens/Result/result_electric_screen.dart';
 import 'package:flutter/material.dart';
 
-class ChalGenderScreen extends StatefulWidget {
-  const ChalGenderScreen({Key? key}) : super(key: key);
+class ChalElectricScreen extends StatefulWidget {
+  const ChalElectricScreen({Key? key}) : super(key: key);
 
   @override
-  State<ChalGenderScreen> createState() => _ChalGenderScreenState();
+  State<ChalElectricScreen> createState() => _ChalElectricScreenState();
 }
 
-class _ChalGenderScreenState extends State<ChalGenderScreen> {
+class _ChalElectricScreenState extends State<ChalElectricScreen> {
   int questionIndex = 0;
   int totalScore = 0;
 
@@ -37,19 +37,19 @@ class _ChalGenderScreenState extends State<ChalGenderScreen> {
         backgroundColor: const Color(0xFF94E1D4),
         foregroundColor: Colors.black,
         title: const Text(
-          'Gender',
+          'Electric',
           style: TextStyle(
             fontSize: 24,
           ),
         ),
       ),
       backgroundColor: const Color(0xFFE5F7F1),
-      body: (questionIndex < genderQuestionList.length)
-          ? QuizGenderScreen(
+      body: (questionIndex < electricQuestionList.length)
+          ? QuizElectricScreen(
               answerPressed: answerPressed,
               questionIndex: questionIndex,
             )
-          : ResultGenderScreen(
+          : ResultElectricScreen(
               totalScore: totalScore,
               resetQuiz: resetQuiz,
             ),
