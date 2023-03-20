@@ -42,6 +42,8 @@ dependencies:
   auth: ^8.2.0+02
   cloud_functions: ^4.0.13
   get: ^4.6.5
+  mockito: ^5.0.15
+  google_sign_in: ^5.4.4
 
 
 dev_dependencies:

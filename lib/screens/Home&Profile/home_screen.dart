@@ -1,5 +1,5 @@
-import 'package:eduwithu/screens/challenge_screen.dart';
-import 'package:eduwithu/screens/education_screen.dart';
+import 'package:eduwithu/screens/Chal/challenge_screen.dart';
+import 'package:eduwithu/screens/Edu/education_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {

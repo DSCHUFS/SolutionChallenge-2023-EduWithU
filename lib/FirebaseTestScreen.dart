@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eduwithu/Data/Edudata_Read.dart';
-import 'package:eduwithu/screens/home_screen.dart';
-import 'package:eduwithu/screens/profile_screen.dart';
+import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
+import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -14,7 +14,7 @@ class TestF extends StatefulWidget {
 }
 
 class _TestFState extends State<TestF> {
-  final db = FirebaseFirestore.instance.collection('Test');
+  final db = FirebaseFirestore.instance.collection('Member');
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,6 +27,7 @@ class _TestFState extends State<TestF> {
               AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>>
                   streamSnapshot) {
             if (streamSnapshot.hasData) {
+              print('object');
               return ListView.builder(
                 itemCount: streamSnapshot.data!.docs.length,
                 itemBuilder: (context, index){
@@ -40,7 +41,13 @@ class _TestFState extends State<TestF> {
                 },
               );
             }
-            return Center(child: CircularProgressIndicator());
+            else{
+              print('else');
+              return Center(child: Text(
+                'dddd'
+              ),
+              );
+            }
           },
         ),
       ),

@@ -1,6 +1,9 @@
+import 'package:auth/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+
+
 
 /*
 class AuthManage {
@@ -63,10 +66,20 @@ class AuthManage {
 class Login{
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
+
+
   getData() async{
 
     var Member = await firestore.collection('Member').doc('3pbyHZh1TNr9QZiB7DL1').get();
     var Profile = await firestore.collection('Profile').doc('UY8xhVMk0E5cLlyNrQSC').get();
+
+    FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+    GoogleSignIn googleSignIn = GoogleSignIn();
+
+    GoogleSignInAccount? account = await googleSignIn.signIn();
+    GoogleSignInAuthentication? authentication = await account?.authentication;
+
+
 
     print(Member);
     print(Profile);

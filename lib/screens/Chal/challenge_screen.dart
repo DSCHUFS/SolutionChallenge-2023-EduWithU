@@ -1,11 +1,13 @@
-import 'package:eduwithu/screens/chal_brush_screen.dart';
-import 'package:eduwithu/screens/chal_digital_screen.dart';
-import 'package:eduwithu/screens/chal_electric_screen.dart';
-import 'package:eduwithu/screens/chal_gender_screen.dart';
-import 'package:eduwithu/screens/chal_handwash_screen.dart';
-import 'package:eduwithu/screens/chal_kiosk_screen.dart';
-import 'package:eduwithu/screens/chal_recycle_screen.dart';
+import 'package:eduwithu/screens/Chal/chal_brush_screen.dart';
+import 'package:eduwithu/screens/Chal/chal_digital_screen.dart';
+import 'package:eduwithu/screens/Chal/chal_electric_screen.dart';
+import 'package:eduwithu/screens/Chal/chal_gender_screen.dart';
+import 'package:eduwithu/screens/Chal/chal_handwash_screen.dart';
+import 'package:eduwithu/screens/Chal/chal_kiosk_screen.dart';
+import 'package:eduwithu/screens/Chal/chal_recycle_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'chal_recycle_screen.dart';
 
 class ChallengeScreen extends StatelessWidget {
   ChallengeScreen({Key? key}) : super(key: key);

@@ -1,15 +1,17 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eduwithu/FirebaseTestScreen.dart';
-import 'package:eduwithu/screens/home_screen.dart';
-import 'package:eduwithu/screens/profile_screen.dart';
+import 'package:eduwithu/LoginTestScreen.dart';
+import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
+import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
 
-  runApp(TestApp());
+  runApp(TestL());
 }
 
 class TestApp extends StatelessWidget {
