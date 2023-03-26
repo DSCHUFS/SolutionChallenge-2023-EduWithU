@@ -25,8 +25,7 @@ class ChalHandwashScreen extends StatefulWidget {
 
 class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTickerProviderStateMixin {
   late VideoPlayerController _controller;
-  late AnimationController _timer;
-  late Animation<Color?> _colorTween;
+
   late Future<void> _initializeVideoPlayerFuture;
 
   get floatingActionButton => null;
@@ -36,31 +35,12 @@ class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTick
     super.initState();
 
     _controller = VideoPlayerController.network(
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+      'https://cdn.pixabay.com/vimeo/413256778/-37274.mp4?width=1280&expiry=1679843292&hash=aabd825adbe46bc5b7ffc7691613e6dffcf4d326',
     );
-
-    _timer = AnimationController(
-      vsync: this,
-      duration: Duration(seconds: 7)
-    )..addListener(() {
-      setState(() {});
-    });
-
-    _timer.forward();
-
-    _timer.addListener(() {
-      // setState를 주지 않으면 애니메이션이 적용되지 않습니다.
-      setState(() {});
-      print(_timer.value);
-    });
-
-    _timer.repeat(reverse: true);
 
     _initializeVideoPlayerFuture = _controller.initialize();
 
     _controller.setLooping(true);
-
-    _colorTween = _timer.drive(ColorTween(begin: Colors.yellow, end: Colors.blue));
 
 
   }
@@ -68,7 +48,6 @@ class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTick
   @override
   void dispose() {
     _controller.dispose();
-    _timer.dispose();
     super.dispose();
   }
 
@@ -152,10 +131,7 @@ class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTick
                     onPrimary: Colors.white,
                   ),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Home()));
+                    Navigator.pushNamed(context, '/a');
                   },
                   child: Text('Next'),
                 )),

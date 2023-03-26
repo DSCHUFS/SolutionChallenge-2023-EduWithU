@@ -33,7 +33,7 @@ class _EduSanitaryScreenState extends State<EduSanitaryScreen> {
   @override
   void initState() {
     _controller = VideoPlayerController.network(
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+      'https://cdn.pixabay.com/vimeo/413256778/-37274.mp4?width=1280&expiry=1679844390&hash=a395bb689705001ecbff7624b7cce9fe475dca29',
     );
 
     _initializeVideoPlayerFuture = _controller.initialize();
@@ -52,6 +52,7 @@ class _EduSanitaryScreenState extends State<EduSanitaryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       appBar: AppBar(
         elevation: 2,
         backgroundColor: const Color(0xFF94E1D4),
