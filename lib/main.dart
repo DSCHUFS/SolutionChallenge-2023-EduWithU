@@ -5,15 +5,18 @@ import 'package:eduwithu/LoginTestScreen.dart';
 import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
 import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
 import 'package:eduwithu/screens/login_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
+  Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
-  runApp(Login() as Widget);
+  runApp(LoginScreen());
 }
 
 class TestApp extends StatelessWidget {
@@ -28,4 +31,3 @@ class TestApp extends StatelessWidget {
     );
   }
 }
-
