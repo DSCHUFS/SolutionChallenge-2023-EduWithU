@@ -61,7 +61,9 @@ class LoginScreen extends StatelessWidget {
                       width: 25,
                       height: 25,
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Text(
                       'Sign in with Google',
                       style: TextStyle(
@@ -75,113 +77,104 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: new Container(
-                      margin: const EdgeInsets.only(left: 10.0, right: 20.0),
-                      child: Divider(
-                        color: Color(0xFFA3EDD7),
-                        height: 36,
-                        thickness: 1,
-                      ),
-                    ),
-                  ),
-                  Text(
-                    'or Sign in with Email',
-                    style: TextStyle(color: Color(0xFF94E1D4)),
-                  ),
-                  Expanded(
-                    child: new Container(
-                      margin: const EdgeInsets.only(left: 20.0, right: 10.0),
-                      child: Divider(
-                        color: Color(0xFFA3EDD7),
-                        height: 36,
-                        thickness: 1,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    'Email',
-                    style: TextStyle(
-                      fontSize: 25,
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                width: 350,
-                height: 55,
-                padding: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 10,
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      'mail@website.com',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Color(0xffA3EDD7),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    'Password',
-                    style: TextStyle(
-                      fontSize: 25,
-                    ),
-                  ),
-                ],
-              ),
-              Container(
-                width: 350,
-                height: 55,
-                padding: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 10,
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Min. 8 character',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Color(0xffA3EDD7),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 50,
-              ),
+              // Row(
+              //   children: [
+              //     Expanded(
+              //       child: new Container(
+              //         margin: const EdgeInsets.only(left: 10.0, right: 20.0),
+              //         child: Divider(
+              //           color: Color(0xFFA3EDD7),
+              //           height: 36,
+              //           thickness: 1,
+              //         ),
+              //       ),
+              //     ),
+              //     Text(
+              //       'or Sign in with Email',
+              //       style: TextStyle(color: Color(0xFF94E1D4)),
+              //     ),
+              //     Expanded(
+              //       child: new Container(
+              //         margin: const EdgeInsets.only(left: 20.0, right: 10.0),
+              //         child: Divider(
+              //           color: Color(0xFFA3EDD7),
+              //           height: 36,
+              //           thickness: 1,
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.start,
+              //   children: [
+              //     Text(
+              //       'Email',
+              //       style: TextStyle(
+              //         fontSize: 25,
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              // Container(
+              //   width: 350,
+              //   height: 55,
+              //   padding: EdgeInsets.symmetric(
+              //     vertical: 10,
+              //     horizontal: 10,
+              //   ),
+              //   decoration: BoxDecoration(
+              //     color: Colors.white,
+              //     borderRadius: BorderRadius.circular(30),
+              //   ),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.start,
+              //     children: [
+              //       Text(
+              //         'mail@website.com',
+              //         style: TextStyle(
+              //           fontSize: 18,
+              //           color: Color(0xffA3EDD7),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.start,
+              //   children: [
+              //     Text(
+              //       'Password',
+              //       style: TextStyle(
+              //         fontSize: 25,
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              // Container(
+              //   width: 350,
+              //   height: 55,
+              //   padding: EdgeInsets.symmetric(
+              //     vertical: 10,
+              //     horizontal: 10,
+              //   ),
+              //   decoration: BoxDecoration(
+              //     color: Colors.white,
+              //     borderRadius: BorderRadius.circular(30),
+              //   ),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.start,
+              //     children: [
+              //       Text(
+              //         'Min. 8 character',
+              //         style: TextStyle(
+              //           fontSize: 18,
+              //           color: Color(0xffA3EDD7),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
