@@ -17,7 +17,6 @@ void main() async {
   );
 
   runApp(LoginScreen());
-
 }
 
 class TestApp extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(EduECompleteScreenApp());
+void main() => runApp(EduSanitaryCompleteScreenApp());
 
-class EduECompleteScreenApp extends StatelessWidget {
+class EduSanitaryCompleteScreenApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,8 +36,6 @@ class _EduSanitaryNextScreenState extends State<EduSanitaryNextScreen> {
           ),
         ),
       ),
-      // VideoPlayerController가 초기화를 진행하는 동안 로딩 스피너를 보여주기 위해
-      // FutureBuilder를 사용합니다.
       body: SingleChildScrollView(
           child: Column(children: [
         Center(
