@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "783635478274",
+    "project_id": "eduwithu-95b02",
+    "storage_bucket": "eduwithu-95b02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783635478274:android:aca16daec0268f487a341b",
+        "android_client_info": {
+          "package_name": "com.example.eduwithu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783635478274-qi57js996pcib177el4thkvvfakevrha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP8q0PG6zbOPFbiYOyApo1MqrG55wWFqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783635478274-qi57js996pcib177el4thkvvfakevrha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+  
+}
