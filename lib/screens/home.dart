@@ -1,5 +1,5 @@
-import 'package:eduwithu/screens/home_screen.dart';
-import 'package:eduwithu/screens/profile_screen.dart';
+import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
+import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
