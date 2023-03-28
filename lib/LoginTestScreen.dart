@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eduwithu/Data/Edudata_Read.dart';
 import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
 import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
+import 'package:eduwithu/screens/google_login.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -22,9 +23,7 @@ class _TestLState extends State<TestL> {
       home: Scaffold(
        body: Center(
          child: TextButton(
-           onPressed: () {
-             print('asdasd');
-           },
+           onPressed: () => signInWithGoogle(),
            child: Text(
              'Login',
              style: TextStyle(color: Colors.cyan),
