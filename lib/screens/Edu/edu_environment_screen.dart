@@ -30,7 +30,7 @@ class _EduEnvironmentScreenState extends State<EduEnvironmentScreen> {
         backgroundColor: const Color(0xFF94E1D4),
         foregroundColor: Colors.black,
         title: const Text(
-          'Sanitary',
+          'EduEnvironment',
           style: TextStyle(
             fontSize: 24,
           ),

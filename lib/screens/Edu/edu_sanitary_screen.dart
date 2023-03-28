@@ -33,7 +33,7 @@ class _EduSanitaryScreenState extends State<EduSanitaryScreen> {
   @override
   void initState() {
     _controller = VideoPlayerController.network(
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+      'https://cdn.pixabay.com/vimeo/413256778/-37274.mp4?width=1280&expiry=1679844390&hash=a395bb689705001ecbff7624b7cce9fe475dca29',
     );
 
     _initializeVideoPlayerFuture = _controller.initialize();
@@ -52,6 +52,7 @@ class _EduSanitaryScreenState extends State<EduSanitaryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       appBar: AppBar(
         elevation: 2,
         backgroundColor: const Color(0xFF94E1D4),
@@ -65,58 +66,58 @@ class _EduSanitaryScreenState extends State<EduSanitaryScreen> {
       ),
       body: SingleChildScrollView(
           child: Column(children: [
-        FutureBuilder(
-          future: _initializeVideoPlayerFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
-              return AspectRatio(
-                aspectRatio: _controller.value.aspectRatio,
-                child: ClipRRect(
-                  child: Stack(children: [
-                    VideoPlayer(_controller),
-                    Center(
-                        child: FloatingActionButton(
-                      backgroundColor: Colors.transparent,
-                      hoverColor: const Color(0xFF94E1D4),
-                      onPressed: () {
-                        setState(() {
-                          if (_controller.value.isPlaying) {
-                            _controller.pause();
-                          } else {
-                            _controller.play();
-                          }
-                        });
-                      },
-                      child: Icon(
-                        _controller.value.isPlaying
-                            ? Icons.pause
-                            : Icons.play_arrow,
-                      ),
-                    ))
-                  ]),
-                ),
-              );
-            } else {
-              return Center(child: CircularProgressIndicator());
-            }
-          },
-        ),
-        const SizedBox(height: 30),
-        Center(
-            child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: const Color(0xFF94E1D4),
-            onPrimary: Colors.white,
-          ),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => EduSanitaryNextScreen()));
-          },
-          child: Text('Next'),
-        )),
-      ])),
+            FutureBuilder(
+              future: _initializeVideoPlayerFuture,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  return AspectRatio(
+                    aspectRatio: _controller.value.aspectRatio,
+                    child: ClipRRect(
+                      child: Stack(children: [
+                        VideoPlayer(_controller),
+                        Center(
+                            child: FloatingActionButton(
+                              backgroundColor: Colors.transparent,
+                              hoverColor: const Color(0xFF94E1D4),
+                              onPressed: () {
+                                setState(() {
+                                  if (_controller.value.isPlaying) {
+                                    _controller.pause();
+                                  } else {
+                                    _controller.play();
+                                  }
+                                });
+                              },
+                              child: Icon(
+                                _controller.value.isPlaying
+                                    ? Icons.pause
+                                    : Icons.play_arrow,
+                              ),
+                            ))
+                      ]),
+                    ),
+                  );
+                } else {
+                  return Center(child: CircularProgressIndicator());
+                }
+              },
+            ),
+            const SizedBox(height: 30),
+            Center(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xFF94E1D4),
+                    onPrimary: Colors.white,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => EduSanitaryNextScreen()));
+                  },
+                  child: Text('Next'),
+                )),
+          ])),
       backgroundColor: const Color(0xFFE5F7F1),
     );
   }
