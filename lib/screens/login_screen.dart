@@ -1,6 +1,8 @@
 import 'package:eduwithu/screens/home.dart';
 import 'package:flutter/material.dart';
 
+import 'google_login.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -71,6 +73,11 @@ class LoginScreen extends StatelessWidget {
                         color: Colors.black,
                       ),
                     ),
+                    GestureDetector(
+                        onTap: (){
+                          signInWithGoogle();
+                        },
+                    )
                   ],
                 ),
               ),
