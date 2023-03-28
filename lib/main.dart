@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eduwithu/FirebaseTestScreen.dart';
+import 'package:eduwithu/Login.dart';
 import 'package:eduwithu/LoginTestScreen.dart';
 import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
 import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
-=======
 import 'package:eduwithu/screens/login_screen.dart';
->>>>>>> login
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -15,7 +13,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
 
-  runApp(TestL());
+  runApp(Login() as Widget);
 }
 
 class TestApp extends StatelessWidget {
