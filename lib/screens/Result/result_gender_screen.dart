@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ResultElectricScreen extends StatelessWidget {
-  const ResultElectricScreen({
+class ResultGenderScreen extends StatelessWidget {
+  const ResultGenderScreen({
     Key? key,
     required this.totalScore,
     required this.resetQuiz,
@@ -36,6 +36,16 @@ class ResultElectricScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () => resetQuiz(),
             child: Text("reset quiz"),
+            style: ButtonStyle(
+              foregroundColor: MaterialStatePropertyAll(Colors.white),
+              backgroundColor: MaterialStatePropertyAll(Color(0xFFA3EDD7)),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text("GO TO CHALLENGE"),
             style: ButtonStyle(
               foregroundColor: MaterialStatePropertyAll(Colors.white),
               backgroundColor: MaterialStatePropertyAll(Color(0xFFA3EDD7)),

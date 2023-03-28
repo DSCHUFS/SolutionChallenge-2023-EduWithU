@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+<<<<<<< HEAD
+	<string>783635478274-ih070bsoqmheube2o0eebrjla36krrl4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.783635478274-ih070bsoqmheube2o0eebrjla36krrl4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCE1hkALFsVdC7UC_x0h_vR9R3ykXmuHbs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>783635478274</string>
+=======
+	<string>420430655624-d37o8a1n2u1jqr9qsrmkt20donn231rl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.420430655624-d37o8a1n2u1jqr9qsrmkt20donn231rl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCG0m7yAsooOJ_m9vuzlaMIie3A71oX0PU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>420430655624</string>
+>>>>>>> SHC
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.eduwithu</string>
+	<key>PROJECT_ID</key>
+<<<<<<< HEAD
+	<string>eduwithu-95b02</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eduwithu-95b02.appspot.com</string>
+=======
+	<string>eduwithu-cdeaf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eduwithu-cdeaf.appspot.com</string>
+>>>>>>> SHC
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+<<<<<<< HEAD
+	<string>1:783635478274:ios:a567c91474361f297a341b</string>
+=======
+	<string>1:420430655624:ios:1a30d61804560158e8af3d</string>
+>>>>>>> SHC
+</dict>
+</plist>

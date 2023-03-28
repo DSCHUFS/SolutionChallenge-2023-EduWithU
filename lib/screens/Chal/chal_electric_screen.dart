@@ -1,6 +1,6 @@
-import 'package:eduwithu/question_list.dart';
-import 'package:eduwithu/screens/quiz_electric_screen.dart';
-import 'package:eduwithu/screens/result_electric_screen.dart';
+import 'package:eduwithu/Data/question_list.dart';
+import 'package:eduwithu/screens/Quiz/quiz_electric_screen.dart';
+import 'package:eduwithu/screens/Result/result_electric_screen.dart';
 import 'package:flutter/material.dart';
 
 class ChalElectricScreen extends StatefulWidget {

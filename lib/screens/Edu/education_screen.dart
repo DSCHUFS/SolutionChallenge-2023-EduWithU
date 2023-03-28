@@ -1,7 +1,7 @@
-import 'package:eduwithu/screens/edu_digital_equality_screen.dart';
-import 'package:eduwithu/screens/edu_environment_screen.dart';
-import 'package:eduwithu/screens/edu_gender_equality_screen.dart';
-import 'package:eduwithu/screens/edu_sanitary_screen.dart';
+import 'package:eduwithu/screens/Edu/edu_digital_equality_screen.dart';
+import 'package:eduwithu/screens/Edu/edu_environment_screen.dart';
+import 'package:eduwithu/screens/Edu/edu_gender_equality_screen.dart';
+import 'package:eduwithu/screens/Edu/edu_sanitary_screen.dart';
 import 'package:flutter/material.dart';
 
 class EducationScreen extends StatelessWidget {
