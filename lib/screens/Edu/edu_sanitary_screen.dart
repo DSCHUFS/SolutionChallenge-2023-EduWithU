@@ -66,58 +66,58 @@ class _EduSanitaryScreenState extends State<EduSanitaryScreen> {
       ),
       body: SingleChildScrollView(
           child: Column(children: [
-        FutureBuilder(
-          future: _initializeVideoPlayerFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
-              return AspectRatio(
-                aspectRatio: _controller.value.aspectRatio,
-                child: ClipRRect(
-                  child: Stack(children: [
-                    VideoPlayer(_controller),
-                    Center(
-                        child: FloatingActionButton(
-                      backgroundColor: Colors.transparent,
-                      hoverColor: const Color(0xFF94E1D4),
-                      onPressed: () {
-                        setState(() {
-                          if (_controller.value.isPlaying) {
-                            _controller.pause();
-                          } else {
-                            _controller.play();
-                          }
-                        });
-                      },
-                      child: Icon(
-                        _controller.value.isPlaying
-                            ? Icons.pause
-                            : Icons.play_arrow,
-                      ),
-                    ))
-                  ]),
-                ),
-              );
-            } else {
-              return Center(child: CircularProgressIndicator());
-            }
-          },
-        ),
-        const SizedBox(height: 30),
-        Center(
-            child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            primary: const Color(0xFF94E1D4),
-            onPrimary: Colors.white,
-          ),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => EduSanitaryNextScreen()));
-          },
-          child: Text('Next'),
-        )),
-      ])),
+            FutureBuilder(
+              future: _initializeVideoPlayerFuture,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  return AspectRatio(
+                    aspectRatio: _controller.value.aspectRatio,
+                    child: ClipRRect(
+                      child: Stack(children: [
+                        VideoPlayer(_controller),
+                        Center(
+                            child: FloatingActionButton(
+                              backgroundColor: Colors.transparent,
+                              hoverColor: const Color(0xFF94E1D4),
+                              onPressed: () {
+                                setState(() {
+                                  if (_controller.value.isPlaying) {
+                                    _controller.pause();
+                                  } else {
+                                    _controller.play();
+                                  }
+                                });
+                              },
+                              child: Icon(
+                                _controller.value.isPlaying
+                                    ? Icons.pause
+                                    : Icons.play_arrow,
+                              ),
+                            ))
+                      ]),
+                    ),
+                  );
+                } else {
+                  return Center(child: CircularProgressIndicator());
+                }
+              },
+            ),
+            const SizedBox(height: 30),
+            Center(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xFF94E1D4),
+                    onPrimary: Colors.white,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => EduSanitaryNextScreen()));
+                  },
+                  child: Text('Next'),
+                )),
+          ])),
       backgroundColor: const Color(0xFFE5F7F1),
     );
   }
