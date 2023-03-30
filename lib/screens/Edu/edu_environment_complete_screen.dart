@@ -75,7 +75,7 @@ class _EduEnvironmentNextScreenState extends State<EduEnvironmentNextScreen> {
                         ElevatedButton.styleFrom(primary: const Color(0xFF94E1D4)),
                         child: Text('Main'),
                         onPressed: () {
-                          Navigator.pushNamed(context, '/a');
+                          Navigator.pushNamedAndRemoveUntil(context, '/a', (route) => false);
                         }),
                     const SizedBox(height: 30),
                   ],
