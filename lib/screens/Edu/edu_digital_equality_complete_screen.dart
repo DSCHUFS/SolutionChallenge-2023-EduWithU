@@ -42,7 +42,7 @@ class _EduDigitalNextScreenState extends State<EduDigitalNextScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 130),
+                    const SizedBox(height: 70),
                     Column(children: [
                       Container(
                         margin: EdgeInsets.all(30),

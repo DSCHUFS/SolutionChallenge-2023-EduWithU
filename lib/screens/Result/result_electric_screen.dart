@@ -28,8 +28,18 @@ class ResultElectricScreen extends StatelessWidget {
           SizedBox(
             height: 150,
           ),
-          Text(resultMessage),
-          Text("맞힌 문제의 개수: " + totalScore.toString()),
+          Text(
+            resultMessage,
+            style: TextStyle(
+              fontSize: 50,
+            ),
+          ),
+          Text(
+            "\n맞힌 문제의 개수: " + totalScore.toString(),
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
           SizedBox(
             height: 100,
           ),
@@ -45,7 +55,9 @@ class ResultElectricScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Text("GO TO CHALLENGE"),
+            child: Text(
+              "GO TO CHALLENGE",
+            ),
             style: ButtonStyle(
               foregroundColor: MaterialStatePropertyAll(Colors.white),
               backgroundColor: MaterialStatePropertyAll(Color(0xFFA3EDD7)),

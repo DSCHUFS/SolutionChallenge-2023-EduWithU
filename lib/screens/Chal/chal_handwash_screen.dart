@@ -30,17 +30,13 @@ class _ChalHandwashScreenState extends State<ChalHandwashScreen> with SingleTick
 
   @override
   void initState() {
-    super.initState();
 
-    _controller = VideoPlayerController.network(
-      'https://cdn.pixabay.com/vimeo/413256778/-37274.mp4?width=1280&expiry=1679843292&hash=aabd825adbe46bc5b7ffc7691613e6dffcf4d326',
+    _controller = VideoPlayerController.asset(
+      'assets/Videos/hand.mp4',
     );
-
     _initializeVideoPlayerFuture = _controller.initialize();
-
     _controller.setLooping(true);
-
-
+    super.initState();
   }
 
   @override

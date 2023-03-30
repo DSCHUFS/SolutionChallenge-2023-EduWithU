@@ -42,7 +42,7 @@ class _EduEnvironmentNextScreenState extends State<EduEnvironmentNextScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 130),
+                    const SizedBox(height: 70),
                     Column(children: [
                       Container(
                         margin: EdgeInsets.all(30),
@@ -64,7 +64,7 @@ class _EduEnvironmentNextScreenState extends State<EduEnvironmentNextScreen> {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(50.0),
                           child: Image.asset(
-                            'images/ThumbsUp.png',
+                            'assets/images/ThumbsUp.png',
                             height: 250,
                             width: 250,
                           )),

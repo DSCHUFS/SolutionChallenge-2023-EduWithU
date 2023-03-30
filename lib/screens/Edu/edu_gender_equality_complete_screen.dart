@@ -42,7 +42,7 @@ class _EduGenderNextScreenState extends State<EduGenderNextScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 130),
+                    const SizedBox(height: 700),
                     Column(children: [
                       Container(
                         margin: EdgeInsets.all(30),
