@@ -1,6 +1,8 @@
-import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
-import 'package:eduwithu/screens/Home&Profile/profile_screen.dart';
+
 import 'package:flutter/material.dart';
+
+import 'Home&Profile/home_screen.dart';
+import 'Home&Profile/profile_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
               const Text(
                 'Where shall we go?',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 27,
                 ),
               ),
               const SizedBox(
@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       vertical: 40,
-                      horizontal: 30,
+                      horizontal: 10,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -95,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       vertical: 40,
-                      horizontal: 30,
+                      horizontal: 10,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

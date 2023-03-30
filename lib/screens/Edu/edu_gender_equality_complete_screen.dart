@@ -64,7 +64,7 @@ class _EduGenderNextScreenState extends State<EduGenderNextScreen> {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(50.0),
                           child: Image.asset(
-                            'images/ThumbsUp.png',
+                            'assets/images/ThumbsUp.png',
                             height: 250,
                             width: 250,
                           )),
@@ -75,10 +75,7 @@ class _EduGenderNextScreenState extends State<EduGenderNextScreen> {
                         ElevatedButton.styleFrom(primary: const Color(0xFF94E1D4)),
                         child: Text('Main'),
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => EduGenderNextScreen()));
+                          Navigator.pushNamedAndRemoveUntil(context, '/a', (route) => false);
                         }),
                     const SizedBox(height: 30),
                   ],

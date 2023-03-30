@@ -32,16 +32,16 @@ class ProfileScreen extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(50.0),
                     child: Image.asset(
-                      'images/profile.png',
-                      height: 100,
-                      width: 100,
+                      'assets/images/Rabbit2.png',
+                      height: 130,
+                      width: 130,
                     ),
                   ),
                   Row(
                     children: [
                       const Text(
-                        'Name',
-                        style: TextStyle(fontSize: 15),
+                        'Churnay',
+                        style: TextStyle(fontSize: 30),
                       ),
                       IconButton(
                           onPressed: () {
@@ -56,8 +56,11 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Divider(
-                  color: const Color(0xFF94E1D4), height: 10, thickness: 8.0),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
+                child: Divider(
+                    color: const Color(0xFF94E1D4), height: 10, thickness: 8.0),
+              ),
               const SizedBox(
                 height: 15,
               ),
@@ -103,8 +106,11 @@ class ProfileScreen extends StatelessWidget {
                   )
                 ],
               ),
-              Divider(
-                  color: const Color(0xFF94E1D4), height: 10, thickness: 8.0),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
+                child: Divider(
+                    color: const Color(0xFF94E1D4), height: 10, thickness: 8.0),
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -116,7 +122,7 @@ class ProfileScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 25),
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
                   Row(
                     children: [
@@ -124,7 +130,7 @@ class ProfileScreen extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.emoji_events,
-                            size: 60,
+                            size: 80,
                           ),
                           const Text(
                             'good hand washer',
@@ -133,13 +139,13 @@ class ProfileScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(
-                        width: 20,
+                        width: 40,
                       ),
                       Column(
                         children: [
                           Icon(
                             Icons.emoji_events,
-                            size: 60,
+                            size: 80,
                           ),
                           const Text(
                             'all challenge finished',
@@ -150,6 +156,7 @@ class ProfileScreen extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
+                      /*
                       Column(
                         children: [
                           Icon(
@@ -161,7 +168,7 @@ class ProfileScreen extends StatelessWidget {
                             style: TextStyle(fontSize: 15),
                           ),
                         ],
-                      )
+                      )*/
                     ],
                   )
                 ],

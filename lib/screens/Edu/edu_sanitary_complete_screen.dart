@@ -42,7 +42,7 @@ class _EduSanitaryNextScreenState extends State<EduSanitaryNextScreen> {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 130),
+            const SizedBox(height: 70),
             Column(children: [
               Container(
                 margin: EdgeInsets.all(30),
@@ -64,18 +64,19 @@ class _EduSanitaryNextScreenState extends State<EduSanitaryNextScreen> {
               ClipRRect(
                   borderRadius: BorderRadius.circular(50.0),
                   child: Image.asset(
-                    'images/ThumbsUp.png',
+                    'assets/images/ThumbsUp.png',
                     height: 250,
                     width: 250,
                   )),
             ]),
             const SizedBox(height: 50),
             ElevatedButton(
-                style:
-                    ElevatedButton.styleFrom(primary: const Color(0xFF94E1D4)),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xFF94E1D4),
+                ),
                 child: Text('Main'),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/a');
+                  Navigator.pushNamedAndRemoveUntil(context, '/a', (route) => false);
                 }),
             const SizedBox(height: 30),
           ],

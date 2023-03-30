@@ -88,9 +88,68 @@ class EducationScreen extends StatelessWidget {
               thickness: 7,
               color: Color(0xFF94E1D4),
             ),
-            const SizedBox(
-              height: 200,
+            const Text(
+              'Education Progress',
+              style: TextStyle(fontSize: 25),
             ),
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              children: [
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/images/pencil.png',
+                      width: 80,
+                      height: 80,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: const Text(
+                        'Hand washing',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  width: 40,
+                ),
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/images/check2.png',
+                      width: 80,
+                      height: 80,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: const Text(
+                        'Recycle',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                /*
+                      Column(
+                        children: [
+                          Icon(
+                            Icons.emoji_events,
+                            size: 60,
+                          ),
+                          const Text(
+                            'good quiz solve',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                        ],
+                      )*/
+              ],
+            )
           ],
         ),
       ),

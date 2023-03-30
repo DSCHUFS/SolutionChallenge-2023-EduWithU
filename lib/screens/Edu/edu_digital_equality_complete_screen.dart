@@ -64,7 +64,7 @@ class _EduDigitalNextScreenState extends State<EduDigitalNextScreen> {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(50.0),
                           child: Image.asset(
-                            'images/ThumbsUp.png',
+                            'assets/images/ThumbsUp.png',
                             height: 250,
                             width: 250,
                           )),
