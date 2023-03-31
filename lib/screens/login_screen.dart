@@ -1,3 +1,4 @@
+import 'package:eduwithu/screens/Home&Profile/home_screen.dart';
 import 'package:eduwithu/screens/home.dart';
 import 'package:flutter/material.dart';
 
@@ -56,9 +57,15 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: GestureDetector(
-                  onTap: () {
+                  onTap: () async {
+
                     signInWithGoogle();
+                    
+                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+                      return HomeScreen();
+                    }));
                   },
+
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
